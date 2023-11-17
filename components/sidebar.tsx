@@ -7,7 +7,7 @@ import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, Video
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { FreeCounter } from "@/components/free-counter";
+
 
 const poppins = Montserrat ({ weight: '600', subsets: ['latin'] });
 
@@ -18,18 +18,8 @@ const routes = [
     href: '/dashboard',
     color: "text-sky-500"
   },
-  {
-    label: 'Conversation',
-    icon: MessageSquare,
-    href: '/conversation',
-    color: "text-violet-500",
-  },
-  {
-    label: 'Image Generation',
-    icon: ImageIcon,
-    color: "text-pink-700",
-    href: '/image',
-  },
+  
+ 
   {
     label: 'Video Generation',
     icon: VideoIcon,
@@ -42,17 +32,8 @@ const routes = [
     color: "text-emerald-500",
     href: '/music',
   },
-  {
-    label: 'Code Generation',
-    icon: Code,
-    color: "text-green-700",
-    href: '/code',
-  },
-  {
-    label: 'Settings',
-    icon: Settings,
-    href: '/settings',
-  },
+  
+  
 ];
 
 export const Sidebar = ({
@@ -93,10 +74,7 @@ export const Sidebar = ({
           ))}
         </div>
       </div>
-      <FreeCounter 
-        apiLimitCount={apiLimitCount} 
-        isPro={isPro}
-      />
+      
     </div>
   );
 };
